@@ -8,5 +8,7 @@ Steps to run locally
 
 Package used
 - React
+- React-Redux
+- React-router
 - Firebase
 - Bootstrap
