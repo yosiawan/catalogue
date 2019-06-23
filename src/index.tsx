@@ -10,6 +10,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import NavbarComponent from "./components/Navbar/Navbar";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 
+import "./index.css";
+
 const history = createBrowserHistory()
 
 ReactDOM.render(

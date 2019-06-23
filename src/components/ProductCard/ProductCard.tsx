@@ -21,6 +21,7 @@ class ProductCard extends Component<ProductCardProp, {}> {
     return (
       <Card className="product-card__container">
         <Card.Img 
+          className="with-img-placeholder"
           onClick={() => onImageClick(product.image)} 
           variant="top" 
           src={product.image} 
