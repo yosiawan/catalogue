@@ -3,25 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "firebase": "^6.2.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
+    "react-infinite-scroller": "^1.2.4",
     "react-redux": "^7.0.3",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "typescript": "^3.5.2"
+    "react-toastify": "^5.2.1",
+    "redux-persist": "^5.10.0",
+    "typescript": "3.5.1"
   },
   "devDependencies": {
-    "@types/firebase": "^3.2.1",
-    "@types/react": "^16.8.22",
     "@types/react-bootstrap": "^0.32.17",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-redux": "^7.1.0",
-    "@types/react-router": "^5.0.2",
-    "@types/react-router-dom": "^4.3.4"
+    "@types/redux-persist": "^4.3.1",
+    "@types/jest": "24.0.13",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "16.8.4",
+    "@types/react-infinite-scroller": "^1.2.1",
+    "@types/react-redux": "^7.0.9",
+    "@types/react-router": "^5.0.1",
+    "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
     "start": "react-scripts start",
