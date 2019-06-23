@@ -29,12 +29,8 @@ class Home extends Component<homeProp, homeState> {
     hasMore: true
   }
 
-  componentDidMount() {
-    this.props.getProducts()
-  }
-
   loadMore = () => {
-    if (Object.keys(this.props.products).length > 15) {
+    if (Object.keys(this.props.products).length >= 15) {
       this.setState({ hasMore: false })
     } else if (Object.keys(this.props.products).length < 15) {
       this.setState({ hasMore: true })
