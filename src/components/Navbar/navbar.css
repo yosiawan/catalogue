@@ -1,0 +1,10 @@
+
+.navbar__nav-item {
+  cursor: pointer;
+  color: white; 
+  margin-left: 20px;
+}
+
+.navbar__child-container {
+  margin-top: 60px;
+}
