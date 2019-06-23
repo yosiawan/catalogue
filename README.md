@@ -7,8 +7,11 @@ Steps to run locally
 - npm start
 
 Package used
+- Typescript
 - React
 - React-Redux
+- Redux-devtools-extension
 - React-router
-- Firebase
+- Redux-persist
+- React-infinite-scroller
 - Bootstrap
