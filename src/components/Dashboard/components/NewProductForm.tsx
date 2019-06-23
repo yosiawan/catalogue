@@ -53,7 +53,6 @@ class NewProductForm extends Component<newProductFormProp, {}> {
       <tr>
         <th>
           <input 
-            className="new-product-form__input-small" 
             type="text" 
             placeholder="ID" 
             ref="newProductID"
@@ -68,7 +67,6 @@ class NewProductForm extends Component<newProductFormProp, {}> {
         </th>
         <th>
           <input 
-            className="new-product-form__input-small" 
             type="number" 
             placeholder="Price" 
             ref="newProductPrice"
@@ -76,7 +74,6 @@ class NewProductForm extends Component<newProductFormProp, {}> {
         </th>
         <th>
           <input 
-            className="new-product-form__input-small" 
             type="text" 
             placeholder="Sizes" 
             ref="newProductSizes"
