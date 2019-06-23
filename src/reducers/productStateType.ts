@@ -8,5 +8,5 @@ export type singleProductDataType = {
 }
 
 export type productsDataType = {
-  [id: number]: singleProductDataType
+  [id: string]: singleProductDataType
 }
