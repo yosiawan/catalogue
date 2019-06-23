@@ -1,0 +1,10 @@
+.product-details__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-details__card {
+  width: 400px;
+  padding: 10px;
+}
