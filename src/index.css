@@ -1,5 +1,5 @@
 .with-img-placeholder {
   width: 400px;
   height: 400px;
-  background: url(loading-spinner.gif) 50% no-repeat;
+  background: url(./assets/round-loading.gif) 50% no-repeat;
 }
