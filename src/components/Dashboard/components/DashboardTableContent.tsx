@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { AnyAction } from "redux";
 import { connect } from "react-redux";
 import { Button } from "react-bootstrap";
+import { Pagination } from "react-bootstrap";
 
 import instanceToInputElement from "../instanceToInputElement";
 import { getProducts, deleteProduct, updateProduct } from "../../../actions/productActions";
@@ -16,17 +17,23 @@ type dashboardTableContentProp = {
 }
 
 type dashboardTableContentState = {
-  activeRow: string
+  activeRow: string;
+  currentPage: number;
 }
 
 class DashboardTableContent extends Component<dashboardTableContentProp, dashboardTableContentState> {
 
   state: dashboardTableContentState = {
     activeRow: "",
+    currentPage: 1
   }
   
   componentDidMount() {
-    this.props.getProducts()
+    let { getProducts, products } = this.props;
+
+    if (Object.keys(products).length < 10) {
+      getProducts()
+    }
   }
 
   onDeleteClicked(id: string) {
@@ -72,6 +79,8 @@ class DashboardTableContent extends Component<dashboardTableContentProp, dashboa
   renderProducts() {
     let temp = [];
     const { products } = this.props;
+    const { currentPage } = this.state;
+
     for (let productId in products) {
       if (productId === this.state.activeRow) {
         temp.push(
@@ -120,7 +129,32 @@ class DashboardTableContent extends Component<dashboardTableContentProp, dashboa
         )
       }
     }
-    return temp;
+
+    let availablePages = Math.ceil(temp.length) / 5;
+    let page = temp.slice(
+      currentPage - 1, 
+      temp[currentPage + 4] ? currentPage + 4 : temp.length
+    );
+    let pagination = []
+
+    for (let i = 1; i < availablePages + 1; i++) {
+      pagination.push(
+        <Pagination.Item onClick={() => this.setState({ currentPage: i*5 })}>{i}</Pagination.Item>
+      )
+    }
+
+    return (
+      <>
+        {page}
+        <tr>
+          <th colSpan={7}>
+            <Pagination>
+              {pagination}
+            </Pagination>
+          </th>
+        </tr>
+      </>
+    )
   }
 
   render() {
