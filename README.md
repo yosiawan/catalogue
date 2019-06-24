@@ -15,3 +15,7 @@ Package used
 - Redux-persist
 - React-infinite-scroller
 - Bootstrap
+
+Notes
+- No back-end
+- All data is randomly generated locally
