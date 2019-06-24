@@ -25,7 +25,7 @@ class DashboardTableContent extends Component<dashboardTableContentProp, dashboa
 
   state: dashboardTableContentState = {
     activeRow: "",
-    currentPage: 1
+    currentPage: 0
   }
   
   componentDidMount() {
@@ -131,15 +131,18 @@ class DashboardTableContent extends Component<dashboardTableContentProp, dashboa
     }
 
     let availablePages = Math.ceil(temp.length) / 5;
-    let page = temp.slice(
-      currentPage - 1, 
-      temp[currentPage + 4] ? currentPage + 4 : temp.length
-    );
-    let pagination = []
 
+    // get 5 items per page based on current page
+    let page = temp.slice(
+      5 * currentPage, 
+      temp[5 * (currentPage + 1)] ? 5 * (currentPage + 1) : temp.length
+    );
+
+    // create pagination buttons
+    let pagination = []
     for (let i = 1; i < availablePages + 1; i++) {
       pagination.push(
-        <Pagination.Item onClick={() => this.setState({ currentPage: i*5 })}>{i}</Pagination.Item>
+        <Pagination.Item onClick={() => this.setState({ currentPage: i - 1 })}>{i}</Pagination.Item>
       )
     }
 
